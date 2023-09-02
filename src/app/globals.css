@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* styles/globals.css */
+
+@font-face {
+  font-family: 'ZCOOLKuaiLe-Regular'; /* Name you'll use to reference the font */
+  src: url('/fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype'); /* Path relative to the public folder */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Use system font during load */
+}
+
+#menu-toggle:checked + #menu {
+  display: block;
+}
