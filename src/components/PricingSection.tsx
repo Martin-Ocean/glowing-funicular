@@ -27,265 +27,203 @@ const pricing_category: ServiceCategory = {
         },
         {
             "title": "连麦休息",
-            "price": 0,
+            "price": 65,
             "unit": "7H"
         },
         {
-            "title": "情感电台",
-            "price": 0,
+            "title": "电台",
+            "price": 29,
             "unit": "0.5H"
         },
         {
             "title": "虚拟恋人",
             "price": 151,
-            "unit": "天"
+            "unit": "1D"
         },
         {
-            "title": "常规",
+            "title": "唱歌(常规)",
             "price": 6,
             "unit": "首"
         },
         {
-            "title": "歌手",
+            "title": "唱歌(歌手)",
             "price": 9,
             "unit": "首"
         },
         {
-            "title": "常规礼包",
+            "title": "唱歌(常规礼包)",
             "price": 29,
             "unit": "5首"
         },
         {
-            "title": "歌手礼包",
+            "title": "唱歌(歌手礼包)",
             "price": 44,
             "unit": "5首"
-        },
+        }
     ],
-    "游戏陪玩类服务1": [
+    "游戏类陪玩价目表": [
         {
-            "title": "聊天 / 哄睡",
-            "price": 15,
+            "title": "LOL(Normal/TFT/Aram)",
+            "price": 16,
             "unit": "H"
         },
         {
-            "title": "连麦观影",
-            "price": 13,
+            "title": "PUBG(娱乐模式)",
+            "price": 16,
             "unit": "H"
         },
         {
-            "title": "连麦休息",
-            "price": 0,
-            "unit": "7H"
+            "title": "CSGO(匹配/无段位官匹)",
+            "price": 16,
+            "unit": "H"
         },
         {
-            "title": "情感电台",
-            "price": 0,
-            "unit": "0.5H"
+            "title": "Naraka(娱乐模式/Rank 另算)",
+            "price": 16,
+            "unit": "H"
         },
         {
-            "title": "虚拟恋人",
-            "price": 151,
-            "unit": "天"
+            "title": "R6/COD/OW/黎明杀机",
+            "price": 16,
+            "unit": "H"
         },
         {
-            "title": "常规",
-            "price": 6,
-            "unit": "首"
+            "title": "Steam游戏",
+            "price": 16,
+            "unit": "H"
         },
         {
-            "title": "歌手",
-            "price": 9,
-            "unit": "首"
-        },
-        {
-            "title": "常规礼包",
-            "price": 29,
-            "unit": "5首"
-        },
-        {
-            "title": "歌手礼包",
-            "price": 44,
-            "unit": "5首"
-        },
+            "title": "逃离塔克夫",
+            "price": 17,
+            "unit": "H"
+        }
     ],
-    "游戏陪玩类服务2": [
+    "LOL陪练价目表": [
         {
-            "title": "聊天 / 哄睡",
-            "price": 15,
-            "unit": "H"
-        },
-        {
-            "title": "连麦观影",
+            "title": "黑铁/青铜/白银",
             "price": 13,
-            "unit": "H"
+            "unit": "Round"
         },
         {
-            "title": "连麦休息",
-            "price": 0,
-            "unit": "7H"
+            "title": "黄金段位",
+            "price": 16,
+            "unit": "Round"
         },
         {
-            "title": "情感电台",
-            "price": 0,
-            "unit": "0.5H"
+            "title": "铂金段位",
+            "price": 17,
+            "unit": "Round"
         },
         {
-            "title": "虚拟恋人",
-            "price": 151,
-            "unit": "天"
+            "title": "钻四钻三",
+            "price": 23,
+            "unit": "Round"
         },
         {
-            "title": "常规",
-            "price": 6,
-            "unit": "首"
+            "title": "钻二",
+            "price": 25,
+            "unit": "Round"
         },
         {
-            "title": "歌手",
-            "price": 9,
-            "unit": "首"
-        },
-        {
-            "title": "常规礼包",
-            "price": 29,
-            "unit": "5首"
-        },
-        {
-            "title": "歌手礼包",
-            "price": 44,
-            "unit": "5首"
-        },
-    ], "游戏陪玩类服务3": [
-        
-        {
-            "title": "连麦休息",
-            "price": 0,
-            "unit": "7H"
-        },
-        {
-            "title": "情感电台",
-            "price": 0,
-            "unit": "0.5H"
-        },
-        {
-            "title": "虚拟恋人",
-            "price": 151,
-            "unit": "天"
-        },
-        {
-            "title": "常规",
-            "price": 6,
-            "unit": "首"
-        },
-        {
-            "title": "歌手",
-            "price": 9,
-            "unit": "首"
-        },
-        {
-            "title": "常规礼包",
-            "price": 29,
-            "unit": "5首"
-        },
-        {
-            "title": "歌手礼包",
-            "price": 44,
-            "unit": "5首"
-        },
-    ], "游戏陪玩类服务4": [
-        {
-            "title": "聊天 / 哄睡",
-            "price": 15,
-            "unit": "H"
-        },
-        {
-            "title": "连麦观影",
-            "price": 13,
-            "unit": "H"
-        },
-        {
-            "title": "连麦休息",
-            "price": 0,
-            "unit": "7H"
-        },
-        {
-            "title": "情感电台",
-            "price": 0,
-            "unit": "0.5H"
-        },
-        {
-            "title": "虚拟恋人",
-            "price": 151,
-            "unit": "天"
-        },
-        {
-            "title": "常规",
-            "price": 6,
-            "unit": "首"
-        },
-        {
-            "title": "歌手",
-            "price": 9,
-            "unit": "首"
-        },
-        {
-            "title": "常规礼包",
-            "price": 29,
-            "unit": "5首"
-        },
-        {
-            "title": "歌手礼包",
-            "price": 44,
-            "unit": "5首"
-        },
+            "title": "钻一",
+            "price": 25,
+            "unit": "Round"
+        }
     ],
-    "游戏陪玩类服务5": [
+    "APEX价目表": [
         {
-            "title": "聊天 / 哄睡",
-            "price": 15,
+            "title": "匹配 1陪2",
+            "price": 18,
             "unit": "H"
         },
         {
-            "title": "连麦观影",
-            "price": 13,
+            "title": "青铜/白银 1陪2",
+            "price": 18,
             "unit": "H"
         },
         {
-            "title": "连麦休息",
-            "price": 0,
-            "unit": "7H"
+            "title": "黄金/铂金 1陪2",
+            "price": 20,
+            "unit": "H"
         },
         {
-            "title": "情感电台",
-            "price": 0,
-            "unit": "0.5H"
+            "title": "钻石 1陪2",
+            "price": 22,
+            "unit": "H"
         },
         {
-            "title": "虚拟恋人",
-            "price": 151,
-            "unit": "天"
+            "title": "大师 1陪2",
+            "price": 26,
+            "unit": "H"
         },
         {
-            "title": "常规",
-            "price": 6,
-            "unit": "首"
+            "title": "猎杀 1陪2",
+            "price": 30,
+            "unit": "H"
         },
         {
-            "title": "歌手",
-            "price": 9,
-            "unit": "首"
+            "title": "匹配 2陪1",
+            "price": 17,
+            "unit": "H"
         },
         {
-            "title": "常规礼包",
+            "title": "青铜/白银 1陪2",
+            "price": 17,
+            "unit": "H"
+        },
+        {
+            "title": "黄金/铂金 1陪2",
+            "price": 19,
+            "unit": "H"
+        },
+        {
+            "title": "钻石 1陪2",
+            "price": 21,
+            "unit": "H"
+        },
+        {
+            "title": "大师 1陪2",
+            "price": 25,
+            "unit": "H"
+        },
+        {
+            "title": "猎杀 1陪2",
             "price": 29,
-            "unit": "5首"
+            "unit": "H"
+        }
+    ],
+    "Valorant价目表": [
+        {
+            "title": "黑铁/青铜",
+            "price": 16,
+            "unit": "H"
         },
         {
-            "title": "歌手礼包",
-            "price": 44,
-            "unit": "5首"
+            "title": "白银",
+            "price": 16,
+            "unit": "H"
         },
-    ],
-
+        {
+            "title": "黄金",
+            "price": 18,
+            "unit": "H"
+        },
+        {
+            "title": "白金",
+            "price": 20,
+            "unit": "H"
+        },
+        {
+            "title": "钻石",
+            "price": 25,
+            "unit": "H"
+        },
+        {
+            "title": "神话",
+            "price": 30,
+            "unit": "H"
+        }
+    ]
 }
 
 const generateTable = (item: Service[]): any => {
