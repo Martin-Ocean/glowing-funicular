@@ -4,9 +4,17 @@ import NavBar from '../components/NavBar';
 import { InView, useInView } from 'react-intersection-observer';
 import Hero from '@/components/Hero';
 import PricingSection from '@/components/PricingSection';
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
+
+
 
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   const [refSection1, inViewSection1] = useInView({
     threshold: 0.5
   });
