@@ -29,13 +29,109 @@ body {
 /* styles/globals.css */
 
 @font-face {
-  font-family: 'ZCOOLKuaiLe-Regular'; /* Name you'll use to reference the font */
-  src: url('/fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype'); /* Path relative to the public folder */
+  font-family: "ZCOOLKuaiLe-Regular"; /* Name you'll use to reference the font */
+  src: url("/fonts/ZCOOLKuaiLe-Regular.ttf") format("truetype"); /* Path relative to the public folder */
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Use system font during load */
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 80px;
+}
+
 #menu-toggle:checked + #menu {
   display: block;
+}
+
+.menu-item a {
+  display: inline-block;
+}
+
+.hero-bg-image {
+  border-radius: 50%;
+  /* overflow: hidden; */
+}
+
+.circle-corners {
+  position: relative;
+  background-color: theme(
+    "colors.secondary.DEFAULT"
+  ); /* Color of your choice */
+  border: none;
+  padding: 15px 25px; /* Adjust padding to ensure the corners are visible */
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden; /* Important: to hide the pseudo-elements outside the button */
+}
+
+.circle-corners::before,
+.circle-corners::after {
+  content: "";
+  position: absolute;
+  width: 20px; /* Radius of circle */
+  height: 20px;
+  background-color: black; /* Color of your page background */
+  border-radius: 50%; /* Makes it a circle */
+}
+
+.circle-corners::before {
+  top: -10px; /* Half the circle's size to position it correctly */
+  left: -10px;
+}
+
+.circle-corners::after {
+  top: -10px;
+  right: -10px;
+}
+
+.pricing-card {
+  filter: drop-shadow(0px 4px 20px rgba(240, 216, 0, 1));
+}
+
+.rounded-more {
+  border-radius: 1.5rem;
+}
+
+.rounded-less {
+  border-radius: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid white;
+}
+
+/* tr:nth-child(even) {
+  background-color: theme(colors.secondaryRed.DEFAULT);
+} */
+
+tr:nth-child(odd) {
+  color: black;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.grid {
+  justify-items: center;
 }
