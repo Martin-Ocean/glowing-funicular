@@ -59,7 +59,7 @@ const PricingCard: React.FC<PricingCardProps> = (item) => {
                 <div className='flex-grow border-t border-gray-400'></div>
                 <div className='flex-grow border-t border-gray-400'></div>
             </div>
-            <div className='flex flex-col  my-2 bg-transparent justify-center align-middle text-md ' > { }</div>
+            <div className='flex flex-col  my-2 bg-transparent justify-center align-middle text-md ' > {item.other}</div>
         </div>
     );
 }
