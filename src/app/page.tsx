@@ -1,6 +1,5 @@
 'use client'
 
-import NavBar from '../components/NavBar';
 import { InView, useInView } from 'react-intersection-observer';
 import Hero from '@/components/Hero';
 import PricingSection from '@/components/PricingSection';
@@ -12,6 +11,7 @@ import EventsSection from '@/components/EventsSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link';
+import NavBar from '@/components/NavBar';
 
 
 
