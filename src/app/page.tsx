@@ -1,17 +1,17 @@
 'use client'
 
 import { InView, useInView } from 'react-intersection-observer';
-import Hero from '../components/Hero';
-import PricingSection from '../components/PricingSection';
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import SnacksMenuSection from '../components/SnacksMenuSection';
-import EventsSection from '../components/EventsSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link';
-import NavBar from '../components/NavBar';
+import EventsSection from '@/components/EventsSection';
+import Hero from '@/components/Hero';
+import NavBar from '@/components/NavBar';
+import PricingSection from '@/components/PricingSection';
+import SnacksMenuSection from '@/components/SnacksMenuSection';
 
 
 
