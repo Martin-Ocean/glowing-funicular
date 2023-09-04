@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import PricingCard from './PricingCard';
+import GenericCard from './GenericCard';
 
 type Service = {
     title: string,
@@ -242,12 +242,12 @@ const generateTable = (item: Service[]): any => {
 const PricingSection = () => {
     return (
         <div className="container">
-            <div className="text-white text-6xl text-center">
+            <div className="text-black text-6xl text-center">
                 项目 & 价格
             </div>
             <div className='md:mx-20 my-20 py-8 px-8 grid grid-cols-2 gap-4'>
                 {Object.keys(pricing_category).map(key => {
-                    return <PricingCard key={`pricing_card_${key}`} title={key} text={generateTable(pricing_category[key]["service-list"])} other={pricing_category[key]["other"]} />
+                    return <GenericCard key={`pricing_card_${key}`} title={key} text={generateTable(pricing_category[key]["service-list"])} other={pricing_category[key]["other"]} />
                 })}
             </div>
         </div>
