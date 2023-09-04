@@ -1,13 +1,17 @@
 'use client'
-import Image from 'next/image';
+
 import NavBar from '../components/NavBar';
 import { InView, useInView } from 'react-intersection-observer';
 import Hero from '@/components/Hero';
 import PricingSection from '@/components/PricingSection';
 import AOS from "aos";
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-
+import SnacksMenuSection from '@/components/SnacksMenuSection';
+import EventsSection from '@/components/EventsSection';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link';
 
 
 
@@ -32,36 +36,47 @@ export default function Home() {
   });
 
   return (
-    <InView>
+    <InView as={'div'}>
       <div className="bg-black text-white min-h-screen font-custom overflow-x-hidden overflow-y-hidden ">
         <NavBar inViewOrNo={[inViewSection1, inViewSection2, inViewSection3, inViewSection4, inViewSection5]} />
-        <div className="container mx-auto pt-20 scroll-smooth">
-          <section ref={refSection1} className='h-screen snap-start' id='section1'>
-            <Hero />
-          </section>
-          
-          <section ref={refSection2} className='h-screen snap-start' id='section2'>
-            <PricingSection/>
-          </section>
-          <section className='h-screen'></section>
-          <section ref={refSection3} className='h-screen snap-start mt-10' id='section3'>
-            <div className="" >
-              <h2 className="text-3xl">零食菜单</h2>
-              {/* Your services content */}
+        <div className="mx-auto pt-20 scroll-smooth justify-between">
+          <section ref={refSection1} className='min-h-screen snap-start' id='home'>
+            <div className='container mx-auto'>
+              <Hero />
             </div>
           </section>
-          <section ref={refSection4} className='h-screen snap-start' id='section4'>
-            <div className="" >
-              <h2 className="text-3xl">福利活动</h2>
-              {/* Your contact content */}
+
+          <div className='absolute h-10vh w-70vw left-0 bg-secondary rounded-r z-10'></div>
+          <section ref={refSection2} className='relative min-h-screen snap-start z-20 pt-4' id='pricing'>
+            <div className='container mx-auto'>
+              <PricingSection />
             </div>
           </section>
-          <section ref={refSection5} className='h-screen snap-start' id='section5'>
-            <div className="" >
+          {/* <section className='h-screen'></section> */}
+          <div className='absolute h-10vh w-70vw right-0 bg-secondary rounded-l z-10'></div>
+          <section ref={refSection3} className='relative min-h-screen snap-start z-20 pt-4' id='snacks'>
+            <div className='container mx-auto'>
+              <SnacksMenuSection />
+            </div>
+          </section>
+          <div className='absolute h-10vh w-70vw left-0 bg-secondary rounded-r z-10'></div>
+          <section ref={refSection4} className='relative min-h-screen snap-start z-20 pt-4' id='events'>
+            <div className='container mx-auto'>
+              <EventsSection />
+            </div>
+          </section>
+          {/* <div className='h-20vh w-80vw absolute right-0 bg-secondary rounded-l-full'></div> */}
+          <section ref={refSection5} className='snap-start ' id='section5'>
+            {/* <div className="" >
               <h2 className="text-3xl">加入我们</h2>
-              {/* Your services content */}
-            </div>
+              
+            </div> */}
           </section>
+          <Link href={"https://discord.gg/narutoclub66"} className='fixed z-50 bottom-4 right-4 p-4 rounded-full bg-secondary text-black shadow-lg hover:bg-white transition transform hover:scale-105'>
+            <button>
+              <FontAwesomeIcon className='relative' icon={faDiscord} beat size="xl" />
+            </button>
+          </Link>
         </div>
       </div>
     </InView>
