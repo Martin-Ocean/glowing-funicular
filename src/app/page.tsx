@@ -1,17 +1,24 @@
 'use client'
 
 import { InView, useInView } from 'react-intersection-observer';
+import dynamic from 'next/dynamic';
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import EventsSection from '@/components/EventsSection';
-import Hero from '@/components/Hero';
-import PricingSection from '@/components/PricingSection';
-import SnacksMenuSection from '@/components/SnacksMenuSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import NavBar from '@/components/NavBar';
+// import EventsSection from '@/components/EventsSection';
+// import Hero from '@/components/Hero';
+// import PricingSection from '@/components/PricingSection';
+// import SnacksMenuSection from '@/components/SnacksMenuSection';
+// import NavBar from '@/components/NavBar';
+
+const Hero = dynamic(() => import("../components/Hero"));
+const PricingSection = dynamic(() => import("../components/PricingSection"));
+const EventsSection = dynamic(() => import("../components/EventsSection"));
+const SnacksMenuSection = dynamic(() => import("../components/SnacksMenuSection"));
+const NavBar = dynamic(() => import("../components/NavBar"));
 
 
 export default function Home() {
