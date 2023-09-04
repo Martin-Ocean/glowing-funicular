@@ -7,11 +7,11 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import EventsSection from '@/components/EventsSection';
 import Hero from '@/components/Hero';
-import NavBar from '@/components/NavBar';
 import PricingSection from '@/components/PricingSection';
 import SnacksMenuSection from '@/components/SnacksMenuSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import NavBar from '@/components/NavBar';
 
 
 export default function Home() {
