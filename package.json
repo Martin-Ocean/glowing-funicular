@@ -29,5 +29,8 @@
     "sharp": "^0.32.5",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "cssnano": "^6.0.1"
   }
 }
