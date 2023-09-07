@@ -1,11 +1,8 @@
-"use client"
-
 import Footer from '@/components/Footer'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
-import ActiveSectionContextProvider from '@/context/active-section-context'
-import dynamic from 'next/dynamic';
-const NavBar = dynamic(() => import("../components/NavBar"));
+import ActiveSectionContextProvider from '@/context/active-section-context';
+import NavBar from '@/components/NavBar';
 
 export const metadata: Metadata = {
   title: '吃吃派对',
