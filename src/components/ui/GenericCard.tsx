@@ -14,11 +14,7 @@ type GenericCardProps = {
 
 const GenericCard: React.FC<GenericCardProps> = (item) => {
     return (
-        <div data-aos={'flip-up'} 
-            data-aos-offset="50"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out" className={`flex flex-col justify-between px-4 py-4 h-full rounded-more ${item.imgOnly ? "w-80vw" : "xl:w-20vw md:w-40vw sm:w-70vw"} generic-card bg-white text-black snap-center`}>
+        <div className={`flex flex-col justify-between px-4 py-4 h-full rounded-more ${item.imgOnly ? "w-80vw" : "xl:w-20vw md:w-40vw sm:w-70vw"} generic-card bg-white text-black snap-center`}>
             <div className='rounded-less  overflow-hidden'> {/* image or large text for display*/}
                 {item.text}
             </div>

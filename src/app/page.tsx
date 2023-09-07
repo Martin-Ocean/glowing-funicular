@@ -1,8 +1,6 @@
 'use client'
 
 import dynamic from 'next/dynamic';
-import AOS from "aos";
-import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,13 +14,8 @@ const SnacksMenuSection = dynamic(() => import("../components/SnacksMenuSection"
 
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
   return (
-    <main className="flex flex-col mx-auto first-letter:justify-between bg-black text-white min-h-screen overflow-x-hidden">
-
+    <main className="flex flex-col mx-auto justify-around space-y-20 bg-black text-white min-h-screen overflow-x-hidden">
       <Hero />
       <PricingSection />
       <SnacksMenuSection />
