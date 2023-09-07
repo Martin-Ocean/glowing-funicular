@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import GenericCard from './GenericCard';
+import GenericCard from './ui/GenericCard';
+import { useSectionInView } from '@/lib/hooks';
+import { motion } from 'framer-motion';
 
 type Service = {
     title: string,
@@ -228,8 +230,8 @@ const generateTable = (item: Service[]): any => {
                 {item.map(item => {
                     return (
                         <tr key={item.title}>
-                            <td className='text-center rounded-less py-2'>{item.title}</td>
-                            <td className='text-center rounded-less py-2'>{`${item.price}/${item.unit}`}</td>
+                            <td className='text-center rounded-less py-2 break-words w-full'>{item.title}</td>
+                            <td className='text-center rounded-less py-2 break-words w-full'>{`${item.price}/${item.unit}`}</td>
                         </tr>)
                 })}
 
@@ -238,19 +240,25 @@ const generateTable = (item: Service[]): any => {
     )
 
 }
-const PricingSection = () => {
+export default function PricingSection() {
+    const { ref } = useSectionInView("pricing");
     return (
-        <div className="container">
-            <div className="text-black text-6xl text-center">
+        <section ref={ref}
+            id='pricing'
+            className='relative min-h-screen min-w-screen snap-start pt-4'
+            >
+
+            <div className="text-white text-6xl text-center">
                 项目 & 价格
             </div>
-            <div className='md:mx-20 my-20 py-8 px-8 grid grid-cols-2 gap-4'>
+            <div className='flex relative h-1vh w-80vw left-0 bg-secondary rounded-r mt-4' />
+            <div className='md:mx-20 my-16 px-8 grid xl:grid-cols-4  md:grid-cols-2  xs:grid-cols-1 gap-x-8 gap-y-8'>
                 {Object.keys(pricing_category).map(key => {
                     return <GenericCard key={`pricing_card_${key}`} title={key} text={generateTable(pricing_category[key]["service-list"])} other={pricing_category[key]["other"]} />
                 })}
             </div>
-        </div>
+
+        </section>
     );
 }
 
-export default PricingSection

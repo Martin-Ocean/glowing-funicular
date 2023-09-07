@@ -1,6 +1,11 @@
+"use client"
+
 import Footer from '@/components/Footer'
-import './globals.css'
+import '../styles/globals.css'
 import type { Metadata } from 'next'
+import ActiveSectionContextProvider from '@/context/active-section-context'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import("../components/NavBar"));
 
 export const metadata: Metadata = {
   title: '吃吃派对',
@@ -12,10 +17,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='!scroll-smooth font-custom'>
       <body>
-        {children}
-        <Footer/>
+        <ActiveSectionContextProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   )

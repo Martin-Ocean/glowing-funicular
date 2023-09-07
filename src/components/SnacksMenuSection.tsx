@@ -1,7 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import GenericCard from './GenericCard';
+import GenericCard from './ui/GenericCard';
 import Image from 'next/image';
+import { useSectionInView } from '@/lib/hooks';
 
 type Product = {
     title: string,
@@ -32,45 +33,52 @@ const generateTable = (item: Product[]): any => {
 
 }
 const SnacksMenuSection = () => {
+    const { ref } = useSectionInView("snacks");
     return (
-        <div className="container">
-            <div className="text-black text-6xl text-center">
+        <section ref={ref} className='relative min-h-screen snap-start z-20 pt-4' id='snacks'>
+
+            <div className="text-white text-6xl text-center">
                 零食菜单
             </div>
-            <div className='md:mx-20 my-20 py-8 px-8 grid grid-cols-1'>
-                <GenericCard title={"test"} imgOnly={true} text={(
-                    <div className=''>
+            <div className='flex relative h-1vh w-80vw left-0 bg-secondary rounded-r mt-4' />
+            <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-y-8 gap-x-2'>
+                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
+                    <GenericCard title={"test"} imgOnly={true} text={(
+                        <div className=''>
+                            <Image
+                                width={3000}
+                                height={3000}
+                                src={"/images/snacks-01.png"}
+                                alt={'Snacks Menu 01'}
+                                style={{ objectFit: "contain" }}
+                            />
+                        </div>)} />
+                </div>
+                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
+                    <GenericCard title={"test"} imgOnly={true} text={(
+                        <div>
+                            <Image
+                                width={3000}
+                                height={3000}
+                                src={"/images/snacks-02.png"}
+                                alt={'Snacks Menu 02'}
+                            />
+                        </div>)} />
+                </div>
+                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
+                    <GenericCard title={"test"} imgOnly={true} text={(<div>
                         <Image
                             width={3000}
                             height={3000}
-                            src={"/images/snacks-01.png"}
-                            alt={'Snacks Menu 01'}
-                            style={{ objectFit: "contain" }}
+                            src={"/images/snacks-03.png"}
+                            alt={'Snacks Menu 03'}
                         />
                     </div>)} />
+                </div>
             </div>
-            <div className='md:mx-20 my-20 py-8 px-8 grid grid-cols-1'>
-                <GenericCard title={"test"} imgOnly={true} text={(
-                    <div>
-                        <Image
-                            width={3000}
-                            height={3000}
-                            src={"/images/snacks-02.png"}
-                            alt={'Snacks Menu 02'}
-                        />
-                    </div>)} />
-            </div>
-            <div className='md:mx-20 my-20 py-8 px-8 grid grid-cols-1'>
-                <GenericCard title={"test"} imgOnly={true} text={(<div>
-                    <Image
-                        width={3000}
-                        height={3000}
-                        src={"/images/snacks-03.png"}
-                        alt={'Snacks Menu 03'}
-                    />
-                </div>)} />
-            </div>
-        </div>
+
+
+        </section>
     );
 }
 
