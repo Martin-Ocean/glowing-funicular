@@ -7,9 +7,9 @@ const Footer = () => {
                 <div className="flex justify-between items-center">
                     <div className="text-xl font-bold">Chi Chi Party</div>
                     <div className="space-x-4">
-                        <a href="#" className="hover:text-gray-400">About Us</a>
-                        <a href="#" className="hover:text-gray-400">Blog</a>
-                        <a href="#" className="hover:text-gray-400">Contact</a>
+                        <a href="#" className="hover:text-gray-400"></a>
+                        <a href="#" className="hover:text-gray-400"></a>
+                        <a href="#" className="hover:text-gray-400"></a>
                     </div>
                 </div>
 
