@@ -251,7 +251,8 @@ export default function PricingSection() {
             <div className="text-white text-6xl text-center">
                 项目 & 价格
             </div>
-            <div className='flex relative h-1vh w-80vw left-0 bg-secondary rounded-r mt-4' />
+            <div className='flex w-full justify-end'><div className='flex relative h-1vh w-60vw right-0 bg-secondary rounded-l mt-4' /></div>
+            
             <div className='md:mx-20 my-16 px-8 grid xl:grid-cols-4  md:grid-cols-2  xs:grid-cols-1 gap-x-8 gap-y-8'>
                 {Object.keys(pricing_category).map(key => {
                     return <GenericCard key={`pricing_card_${key}`} title={key} text={generateTable(pricing_category[key]["service-list"])} other={pricing_category[key]["other"]} />

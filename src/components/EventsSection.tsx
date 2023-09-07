@@ -11,7 +11,7 @@ const EventsSection = () => {
             <div className="text-white text-6xl text-center">
                 福利活动
             </div>
-            <div className='flex relative h-1vh w-80vw left-0 bg-secondary rounded-r mt-4' />
+            <div className='flex w-full justify-end'><div className='flex relative h-1vh w-60vw left-0 bg-secondary rounded-l mt-4' /></div>
             <div className='grid grid-cols-1 my-20 py-8 px-8'>
                 <GenericCard title={"test"} imgOnly={true} text={(<div>
                     <Image
