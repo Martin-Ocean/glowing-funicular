@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe:wght@400;700&display=swap);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,13 +31,13 @@ body {
 
 /* styles/globals.css */
 
-@font-face {
-  font-family: "ZCOOLKuaiLe-Regular"; /* Name you'll use to reference the font */
-  src: url("/fonts/ZCOOLKuaiLe-Regular.ttf") format("truetype"); /* Path relative to the public folder */
+/* @font-face {
+  font-family: "ZCOOLKuaiLe-Regular"; /* Name you'll use to reference the font 
+  src: url("/fonts/ZCOOLKuaiLe-Regular.ttf") format("truetype"); /* Path relative to the public folder 
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Use system font during load */
-}
+  font-display: swap; /* Use system font during load 
+} */
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
@@ -48,6 +51,7 @@ body {
 }
 
 * {
+  font-family: 'ZCOOL KuaiLe', cursive;
   scroll-behavior: smooth;
   scroll-margin-top: 80px;
 }
