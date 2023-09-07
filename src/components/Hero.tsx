@@ -1,8 +1,8 @@
 "use client"
-import { useActiveSectionContext } from '@/context/active-section-context';
+
 import { useSectionInView } from '@/lib/hooks';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const adj_list_hero = [
     {
