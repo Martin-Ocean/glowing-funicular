@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <ActiveSectionContextProvider>
       <NavBar />
-      <main className="flex flex-col mx-auto justify-around space-y-20 bg-black text-white min-h-screen overflow-x-hidden">
+      <main className="flex flex-col mx-auto justify-around space-y-20 bg-black text-white min-h-screen overflow-x-hidden font-home">
         <Hero />
         <PricingSection />
         <SnacksMenuSection />

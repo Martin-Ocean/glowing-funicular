@@ -30,7 +30,7 @@ const Hero: React.FC<any> = ({ }) => {
             <div className='w-screen h-screen container flex flex-col justify-around mx-0 items-center'> {/* outter  container */}
                 <div className='flex flex-col w-full h-full sm:w-80vw sm:h-auto sm:flex-row sm:pt-10vh sm:px-1 md:px-32 lg:px-64 sm:justify-between z-[1] relative'> {/* inner div for header and image */}
                     <div className='flex flex-col w-full h-screen justify-around sm:w-auto sm:h-auto'> {/* left div for headers */}
-                        <div className='flex text-6xl pt-20 pt-0'>吃吃派对</div>
+                        <div className='flex text-6xl pt-20'>吃吃派对</div>
                         <div className='flex text-4xl flex-col '>
                             <div className='z-5'>北美陪玩，零食店</div>
                             <div className=''>想吃想玩应有尽有</div>

@@ -27,7 +27,7 @@ const NavBar: React.FC<any> = ({ }) => {
 
     return (
         <header>
-            <nav className={`fixed flex w-full h-[64px] z-50 ${scrolling ? 'bg-homeSecondary text-black' : 'bg-black'}`}>
+            <nav className={`fixed flex w-full h-[64px] z-50 font-home ${scrolling ? 'bg-homeSecondary text-black' : 'bg-black'}`}>
                 <div className="flex flex-wrap items-center md:p-0 justify-between w-full md:mx-12 border-b border-white">
                     <div className={`p-3 px-4 text-2xl  ${scrolling ? 'bg-homeSecondary text-black' : 'text-white'} md:ml-12`}>吃吃派对陪玩零食店</div>
                     <div className={` md:hidden pr-1 ${scrolling ? 'text-black' : 'text-white'}`}>
