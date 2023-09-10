@@ -26,18 +26,23 @@ const adj_list_hero = [
 const Hero: React.FC<any> = ({ }) => {
     const { ref } = useSectionInView("home", 0.5);
     return (
-        <section ref={ref} className='min-h-screen snap-start' id='home'>
-            <div className='w-screen h-screen container flex flex-col justify-around'> {/* outter  container */}
-                <div className='flex flex-row pt-12 sm:px-1 md:px-32 lg:px-64 justify-between z-[1] relative'> {/* inner div for header and image */}
-                    <div className='flex flex-col justify-around '> {/* left div for headers */}
-                        <div className='flex text-6xl '>吃吃派对</div>
+        <section ref={ref} className='min-h-screen snap-start flex flex-col items-center' id='home'>
+            <div className='w-screen h-screen container flex flex-col justify-around mx-0 items-center'> {/* outter  container */}
+                <div className='flex flex-col w-full h-full sm:w-80vw sm:h-auto sm:flex-row sm:pt-10vh sm:px-1 md:px-32 lg:px-64 sm:justify-between z-[1] relative'> {/* inner div for header and image */}
+                    <div className='flex flex-col w-full h-screen justify-around sm:w-auto sm:h-auto'> {/* left div for headers */}
+                        <div className='flex text-6xl pt-20 pt-0'>吃吃派对</div>
                         <div className='flex text-4xl flex-col '>
                             <div className='z-5'>北美陪玩，零食店</div>
                             <div className=''>想吃想玩应有尽有</div>
                         </div>
-                        <div className='flex'><button type='button' className='rounded-l-full rounded-r-full bg-homeSecondary text-black'><div className='px-8 py-2 text-2xl'>加入 Discord</div></button></div>
+                        <div className='flex'>
+                            <button type='button' className='flex flex-row justify-center px-8 py-2 rounded-l-full rounded-r-full bg-homeSecondary text-black'>
+                                <div className='hidden sm:flex text-2xl sm:pr-4'>加入</div>
+                                <div className='text-2xl'>Discord</div>
+                            </button>
+                        </div>
                     </div>
-                    <div className='relative flex'> {/* right div for image */}
+                    <div className='relative hidden sm:flex'> {/* right div for image */}
                         <Image
                             width={420}
                             height={560}
@@ -46,7 +51,7 @@ const Hero: React.FC<any> = ({ }) => {
                         />
                     </div>
                 </div>
-                <div className='flex bg-homeSecondary h-14 mb-12 transform -rotate-1 justify-around text-black mx-20'>
+                <div className='hidden sm:flex sm:w-80vw bg-homeSecondary h-14 mb-12 transform -rotate-1 justify-around text-black'>
 
                     {adj_list_hero.map((item): any => (
                         <div key={item.text} className='flex flex-col justify-center align-middle text-2xl'> {item.text} </div>
