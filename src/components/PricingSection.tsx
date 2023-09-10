@@ -220,7 +220,7 @@ const pricing_category: ServiceCategory = {
 const generateTable = (item: Service[]): any => {
     return (
         <table className='table-fixed font-custom'>
-            <thead className='bg-secondary text-black'>
+            <thead className='bg-homeSecondary text-black'>
                 <tr>
                     <th className='text-black text-2xl'>项目</th>
                     <th className='text-black text-2xl'>价格</th>
@@ -251,7 +251,7 @@ export default function PricingSection() {
             <div className="text-white text-6xl text-center">
                 项目 & 价格
             </div>
-            <div className='flex w-full justify-end'><div className='flex relative h-1vh w-60vw right-0 bg-secondary rounded-l mt-4' /></div>
+            <div className='flex w-full justify-end'><div className='flex relative h-1vh w-60vw right-0 bg-homeSecondary rounded-l mt-4' /></div>
             
             <div className='md:mx-20 my-16 px-8 grid xl:grid-cols-4  md:grid-cols-2  xs:grid-cols-1 gap-x-8 gap-y-8'>
                 {Object.keys(pricing_category).map(key => {

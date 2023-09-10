@@ -12,7 +12,7 @@ type Product = {
 const generateTable = (item: Product[]): any => {
     return (
         <table className='table-fixed font-custom'>
-            <thead className='bg-secondary text-black'>
+            <thead className='bg-homeSecondary text-black'>
                 <tr>
                     <th className='text-black text-2xl'>产品</th>
                     <th className='text-black text-2xl'>价格</th>
@@ -40,7 +40,7 @@ const SnacksMenuSection = () => {
             <div className="text-white text-6xl text-center">
                 零食菜单
             </div>
-            <div className='flex relative h-1vh w-60vw left-0 bg-secondary rounded-r mt-4' />
+            <div className='flex relative h-1vh w-60vw left-0 bg-homeSecondary rounded-r mt-4' />
             <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-y-8 gap-x-2'>
                 <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
                     <GenericCard title={"test"} imgOnly={true} text={(

@@ -27,7 +27,7 @@ const Hero: React.FC<any> = ({ }) => {
     const { ref } = useSectionInView("home", 0.5);
     return (
         <section ref={ref} className='min-h-screen snap-start' id='home'>
-            <div className='w-screen h-screen container mx-auto flex flex-col justify-around'> {/* outter  container */}
+            <div className='w-screen h-screen container flex flex-col justify-around'> {/* outter  container */}
                 <div className='flex flex-row pt-12 sm:px-1 md:px-32 lg:px-64 justify-between z-[1] relative'> {/* inner div for header and image */}
                     <div className='flex flex-col justify-around '> {/* left div for headers */}
                         <div className='flex text-6xl '>吃吃派对</div>
@@ -35,7 +35,7 @@ const Hero: React.FC<any> = ({ }) => {
                             <div className='z-5'>北美陪玩，零食店</div>
                             <div className=''>想吃想玩应有尽有</div>
                         </div>
-                        <div className='flex'><button type='button' className='rounded-l-full rounded-r-full bg-secondary text-black'><div className='px-8 py-2 text-2xl'>加入 Discord</div></button></div>
+                        <div className='flex'><button type='button' className='rounded-l-full rounded-r-full bg-homeSecondary text-black'><div className='px-8 py-2 text-2xl'>加入 Discord</div></button></div>
                     </div>
                     <div className='relative flex'> {/* right div for image */}
                         <Image
@@ -46,7 +46,7 @@ const Hero: React.FC<any> = ({ }) => {
                         />
                     </div>
                 </div>
-                <div className='flex bg-secondary h-14 mb-12 transform -rotate-1 justify-around text-black mx-20'>
+                <div className='flex bg-homeSecondary h-14 mb-12 transform -rotate-1 justify-around text-black mx-20'>
 
                     {adj_list_hero.map((item): any => (
                         <div key={item.text} className='flex flex-col justify-center align-middle text-2xl'> {item.text} </div>
