@@ -3,35 +3,14 @@ import React, { useState, useEffect } from 'react';
 import GenericCard from './ui/GenericCard';
 import Image from 'next/image';
 import { useSectionInView } from '@/lib/hooks';
+import Link from 'next/link';
 
 type Product = {
     title: string,
     price: number,
     unit: string,
 }
-const generateTable = (item: Product[]): any => {
-    return (
-        <table className='table-fixed font-custom'>
-            <thead className='bg-homeSecondary text-black'>
-                <tr>
-                    <th className='text-black text-2xl'>产品</th>
-                    <th className='text-black text-2xl'>价格</th>
-                </tr>
-            </thead>
-            <tbody>
-                {item.map(item => {
-                    return (
-                        <tr key={item.title}>
-                            <td className='text-center rounded-less py-2'>{item.title}</td>
-                            <td className='text-center rounded-less py-2'>{`${item.price}/${item.unit}`}</td>
-                        </tr>)
-                })}
 
-            </tbody>
-        </table>
-    )
-
-}
 const SnacksMenuSection = () => {
     const { ref } = useSectionInView("snacks");
     return (
@@ -41,40 +20,40 @@ const SnacksMenuSection = () => {
                 零食菜单
             </div>
             <div className='flex relative h-1vh w-60vw left-0 bg-homeSecondary rounded-r mt-4' />
-            <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-y-8 gap-x-2'>
-                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
-                    <GenericCard title={"test"} imgOnly={true} text={(
-                        <div className=''>
-                            <Image
-                                width={3000}
-                                height={3000}
-                                src={"/images/snacks-01.png"}
-                                alt={'Snacks Menu 01'}
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>)} />
-                </div>
-                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
-                    <GenericCard title={"test"} imgOnly={true} text={(
-                        <div>
-                            <Image
-                                width={3000}
-                                height={3000}
-                                src={"/images/snacks-02.png"}
-                                alt={'Snacks Menu 02'}
-                            />
-                        </div>)} />
-                </div>
-                <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
-                    <GenericCard title={"test"} imgOnly={true} text={(<div>
+            <div className='flex flex-row justify-around mx-0 items-center pt-20'> {/* outter  container */}
+                <div className='flex flex-col w-full h-full sm:w-80vw sm:h-auto sm:flex-row sm:pt-10vh sm:px-1 md:px-32 lg:px-64 sm:justify-between z-[1] relative'> {/* inner div for header and image */}
+                    <div className='relative hidden sm:flex'> {/* right div for image */}
                         <Image
-                            width={3000}
-                            height={3000}
-                            src={"/images/snacks-03.png"}
-                            alt={'Snacks Menu 03'}
+                            width={420}
+                            height={560}
+                            src={"/images/hero-image-01.png"}
+                            alt='Hero Image'
                         />
-                    </div>)} />
+                    </div>
+                    <div className='flex flex-col w-full h-screen justify-around sm:w-auto sm:h-auto'> {/* left div for headers */}
+                        <div className='flex text-6xl pt-20'>美味无限</div>
+                        <div className='flex text-4xl flex-col '>
+                            <div className='z-5'>人气产品, 实惠折扣</div>
+                            <div className=''>薯片, 凤爪,鸭脖, 卤味</div>
+                        </div>
+                        <div className='flex'>
+                            <button type='button' className='flex flex-row justify-center px-8 py-2 rounded-l-full rounded-r-full bg-homeSecondary text-black'>
+                                <Link href={"/snacks"} className='text-2xl'>{"菜单通道 =>"}</Link>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div className='hero-bg-image absolute left-[-112px] top-[164px] z-[4]'>
+                    <Image
+                        width={560}
+                        height={560}
+                        src={"/images/hero-bg-eclipse-01.png"}
+                        alt='background eclipse image'
+                    />
+                </div>
+
             </div>
 
 

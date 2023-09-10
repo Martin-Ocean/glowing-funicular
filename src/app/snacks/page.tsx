@@ -6,6 +6,8 @@ import { Sidebar } from "@/components/sidebar"
 import { top_snacks, snacks_all_category } from "@/lib/data"
 import { useEffect, useState } from "react"
 import { ProductDisplay } from "@/components/snacks/product-display"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export const metadata: Metadata = {
     title: "吃吃派对",
@@ -22,7 +24,7 @@ export default function SnacksPage() {
     return (
         <>
             <div className="flex flex-col">
-                <div className="flex flex-row h-12 bg-background font-home justify-between ">
+                <div className="flex flex-row h-12 bg-pink-100 font-home justify-between ">
                     <div className="flex flex-row justify-between">
                         <div className="p-3">吃吃派对</div>
                         <Separator orientation="vertical" />
@@ -30,8 +32,9 @@ export default function SnacksPage() {
                             零食
                         </div>
                     </div>
-                    <div className="p-3">
-                        button to go back
+                    <div className="flex flex-row justify-around gap-2 pr-2 items-center">
+                        back to
+                        <Button variant="ghost" className="bg-homeSecondary"> <Link href={"/"}>首页</Link></Button>
                     </div>
 
                 </div>

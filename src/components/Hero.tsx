@@ -2,6 +2,7 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const adj_list_hero = [
@@ -37,8 +38,11 @@ const Hero: React.FC<any> = ({ }) => {
                         </div>
                         <div className='flex'>
                             <button type='button' className='flex flex-row justify-center px-8 py-2 rounded-l-full rounded-r-full bg-homeSecondary text-black'>
-                                <div className='hidden sm:flex text-2xl sm:pr-4'>加入</div>
-                                <div className='text-2xl'>Discord</div>
+                                <Link className='flex flex-row' href={"https://discord.gg/narutoclub66"}>
+                                    <div className='hidden sm:flex text-2xl sm:pr-4'>加入</div>
+                                    <div className='text-2xl'>Discord</div>
+                                </Link>
+
                             </button>
                         </div>
                     </div>
