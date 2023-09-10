@@ -100,6 +100,9 @@ module.exports = {
           DEFAULT: "hsl(var(--homeSecondary))",
           foreground: "hsl(var(--homeSecondary-foreground))",
         },
+        snackHeader: {
+          DEFAULT: "hsl(var(--snack-header))"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -14,10 +14,8 @@ interface ExamplesLayoutProps {
 export default function SnacksLayout({ children }: ExamplesLayoutProps) {
   return (
     <>
-      <div className="flex flex-col w-min-screen h-min-screen relative mx-0">
-        <section>
-          {children}
-        </section>
+      <div className="flex flex-col w-full h-full relative mx-0">
+        {children}
       </div>
     </>
   )

@@ -8,7 +8,7 @@ interface ProductDisplayProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function ProductDisplay({ products }: ProductDisplayProps) {
-    // console.log(products);
+    const topFourProducts = products["items"].sort((a: { ranking: number }, b: { ranking: number }) => a.ranking - b.ranking).slice(0, 4);
     return (
         <div
             className="border-none p-0 outline-none"
@@ -16,10 +16,10 @@ export function ProductDisplay({ products }: ProductDisplayProps) {
             <div className="flex items-center justify-between">
                 <div className="space-y-1">
                     <h2 className="text-2xl font-semibold tracking-tight">
-                        Popular Items
+                        人气产品
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                        Top picks for you.
+                        购买最多
                     </p>
                 </div>
             </div>
@@ -27,7 +27,7 @@ export function ProductDisplay({ products }: ProductDisplayProps) {
             <div className="relative">
                 <ScrollArea>
                     <div className="flex space-x-4 pb-4">
-                        {!!products && products.map((product: any) => (
+                        {!!topFourProducts && topFourProducts.map((product: any) => (
                             <ProductCard
                                 key={product.id}
                                 className="w-[250px]"
@@ -40,32 +40,34 @@ export function ProductDisplay({ products }: ProductDisplayProps) {
                     <ScrollBar orientation="horizontal" />
                 </ScrollArea>
             </div>
-            <div className="mt-6 space-y-1">
-                <h2 className="text-2xl font-semibold tracking-tight">
-                    Made for You
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                    Your personal playlists. Updated daily.
-                </p>
-            </div>
-            <Separator className="my-4" />
-            <div className="relative">
-                {/* <ScrollArea>
-                    <div className="flex space-x-4 pb-4">
-                        {madeForYouAlbums.map((album: { name: any }) => (
-                            <AlbumArtwork
-                                key={album.name}
-                                album={album}
-                                className="w-[150px]"
-                                aspectRatio="square"
-                                width={150}
-                                height={150}
-                            />
-                        ))}
+            {(products["id"] !== "mostpopularproducts" && products["id"] !== "mostdiscountproducts") &&
+                <>
+                    <div className="mt-6 space-y-1">
+                        <h2 className="text-2xl font-semibold tracking-tight">
+                            系列所有
+                        </h2>
+                        <p className="text-sm text-muted-foreground">
+                            所有其他产品
+                        </p>
                     </div>
-                    <ScrollBar orientation="horizontal" />
-                </ScrollArea> */}
-            </div>
+                    <Separator className="my-4" />
+                    <div className="relative">
+                        <ScrollArea>
+                            <div className="flex space-x-4 pb-4">
+                                {!!products && !!products["items"] && [...products["items"]].map((product: any) => (
+                                    <ProductCard
+                                        key={product.id}
+                                        className="w-[250px]"
+                                        aspectRatio="portrait"
+                                        width={250}
+                                        height={330}
+                                        product={product} />
+                                ))}
+                            </div>
+                            <ScrollBar orientation="horizontal" />
+                        </ScrollArea>
+                    </div>
+                </>}
         </div>
     )
 }

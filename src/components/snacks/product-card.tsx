@@ -25,7 +25,7 @@ export function ProductCard({
     <div className={cn("space-y-3", className)} {...props}>
       <div className="overflow-hidden rounded-md">
         <Image
-          src={product.imgUrl.length > 0 ? product.imgUrl : "/images/250x330.png"  }
+          src={product.imgUrl.length > 0 ? product.imgUrl : "/images/250x330.png"}
           alt={product.name}
           width={width}
           height={height}
@@ -36,9 +36,17 @@ export function ProductCard({
           onContextMenu={handleRightClick}
         />
       </div>
-      <div className="space-y-1 text-sm">
-        <h3 className="font-medium leading-none">{product.name}</h3>
-        <p className="text-xs text-muted-foreground">{price_formatter('USD', product.price)}</p>
+      <div className="space-y-1 px-3">
+        <div className="flex flex-row justify-between ">
+          <p className="text-md">{product.name}</p>
+          <p className="text-md text-muted-foreground">{price_formatter('USD', product.price)}</p>
+        </div>
+        <div className="flex flex-row justify-start items-center">
+          <p className="text-xs text-muted-foreground">{product.description}</p>
+        </div>
+
+
+
       </div>
     </div>
   )

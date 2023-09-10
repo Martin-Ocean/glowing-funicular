@@ -65,6 +65,8 @@ body {
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    --snack-header: 21, 79%, 74%;
   }
 
   .dark {
