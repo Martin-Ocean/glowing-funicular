@@ -34,7 +34,7 @@ const SnacksMenuSection = () => {
                         <div className='flex text-6xl pt-20'>美味无限</div>
                         <div className='flex text-4xl flex-col '>
                             <div className='z-5'>人气产品, 实惠折扣</div>
-                            <div className=''>薯片, 凤爪,鸭脖, 卤味</div>
+                            <div className=''>薯片, 凤爪, 鸭脖, 卤味</div>
                         </div>
                         <div className='flex'>
                             <button type='button' className='flex flex-row justify-center px-8 py-2 rounded-l-full rounded-r-full bg-homeSecondary text-black'>
