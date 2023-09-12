@@ -28,7 +28,7 @@ export default function Home() {
             </div> */}
       </section>
 
-      <Link href={"https://discord.gg/narutoclub66"} className='fixed z-50 bottom-4 right-4 p-4 rounded-full bg-secondary text-black shadow-lg hover:bg-white transition transform hover:scale-105'>
+      <Link href={"https://discord.gg/chichiparty66"} className='fixed z-50 bottom-4 right-4 p-4 rounded-full bg-secondary text-black shadow-lg hover:bg-white transition transform hover:scale-105'>
         <button>
           <FontAwesomeIcon className='relative' icon={faDiscord} beat size="xl" />
         </button>

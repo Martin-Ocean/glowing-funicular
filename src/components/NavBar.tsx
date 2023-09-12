@@ -66,7 +66,7 @@ const NavBar: React.FC<any> = ({ }) => {
                                     setTimeOfLastClick(Date.now());
                                 }}>福利活动</a></motion.li>
                             <motion.li className={`hover:border-b-2 ${scrolling ? 'text-black hover:border-black ' : 'text-white hover:border-secondary'}`}>
-                                <a href={"https://discord.gg/narutoclub66"}
+                                <a href={"https://discord.gg/chichiparty66"}
                                     className='p-4 flex h-full w-full' >Discord</a></motion.li>
                         </ul>
                     </div>
