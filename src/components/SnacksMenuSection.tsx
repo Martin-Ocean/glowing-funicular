@@ -9,29 +9,8 @@ type Product = {
     price: number,
     unit: string,
 }
-const generateTable = (item: Product[]): any => {
-    return (
-        <table className='table-fixed font-custom'>
-            <thead className='bg-secondary text-black'>
-                <tr>
-                    <th className='text-black text-2xl'>产品</th>
-                    <th className='text-black text-2xl'>价格</th>
-                </tr>
-            </thead>
-            <tbody>
-                {item.map(item => {
-                    return (
-                        <tr key={item.title}>
-                            <td className='text-center rounded-less py-2'>{item.title}</td>
-                            <td className='text-center rounded-less py-2'>{`${item.price}/${item.unit}`}</td>
-                        </tr>)
-                })}
 
-            </tbody>
-        </table>
-    )
 
-}
 const SnacksMenuSection = () => {
     const { ref } = useSectionInView("snacks");
     return (
@@ -48,11 +27,12 @@ const SnacksMenuSection = () => {
                             <Image
                                 width={3000}
                                 height={3000}
-                                src={"/images/snacks-01.png"}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153840701310767175/07b487e82b9d2883.png"}
                                 alt={'Snacks Menu 01'}
                                 style={{ objectFit: "contain" }}
                             />
-                        </div>)} />
+                        </div>
+                    )} />
                 </div>
                 <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
                     <GenericCard title={"test"} imgOnly={true} text={(
@@ -60,20 +40,23 @@ const SnacksMenuSection = () => {
                             <Image
                                 width={3000}
                                 height={3000}
-                                src={"/images/snacks-02.png"}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153841501642698802/4.png"}
                                 alt={'Snacks Menu 02'}
                             />
-                        </div>)} />
+                        </div>
+                    )} />
                 </div>
                 <div className='flex w-80vw md:w-40vw md:transform md:transition-transform md:hover:scale-125'>
-                    <GenericCard title={"test"} imgOnly={true} text={(<div>
-                        <Image
-                            width={3000}
-                            height={3000}
-                            src={"/images/snacks-03.png"}
-                            alt={'Snacks Menu 03'}
-                        />
-                    </div>)} />
+                    <GenericCard title={"test"} imgOnly={true} text={(
+                        <div>
+                            <Image
+                                width={3000}
+                                height={3000}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153841527748051005/5.png"}
+                                alt={'Snacks Menu 03'}
+                            />
+                        </div>
+                    )} />
                 </div>
             </div>
 
