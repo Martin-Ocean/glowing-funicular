@@ -27,7 +27,7 @@ const SnacksMenuSection = () => {
                             <Image
                                 width={3000}
                                 height={3000}
-                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153840701310767175/07b487e82b9d2883.png"}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1154572971696992388/362dd132d7fda485.png"}
                                 alt={'Snacks Menu 01'}
                                 style={{ objectFit: "contain" }}
                             />
@@ -52,7 +52,7 @@ const SnacksMenuSection = () => {
                             <Image
                                 width={3000}
                                 height={3000}
-                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153841527748051005/5.png"}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1154573045902610543/2.png"}
                                 alt={'Snacks Menu 03'}
                             />
                         </div>
