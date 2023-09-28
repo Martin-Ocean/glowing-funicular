@@ -40,7 +40,7 @@ const SnacksMenuSection = () => {
                             <Image
                                 width={3000}
                                 height={3000}
-                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1153841501642698802/4.png"}
+                                src={"https://cdn.discordapp.com/attachments/1153840588299436202/1156878450884358144/3.png?ex=65169284&is=65154104&hm=8e4d965a1b0204f9e0ef82b027cda8bc7c87eb8cf4f236e83affd94746cfbbab&"}
                                 alt={'Snacks Menu 02'}
                             />
                         </div>
